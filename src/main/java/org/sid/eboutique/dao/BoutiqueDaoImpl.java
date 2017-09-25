@@ -29,7 +29,7 @@ public class BoutiqueDaoImpl implements IBoutiqueDao {
 
 	@Override
 	public List<Categorie> listCategories() {
-		Query req=em.createQuery("select c from categorie c");
+		Query req=em.createQuery("select c from Categorie c");
 		// TODO Auto-generated method stub
 		return req.getResultList();
 	}
@@ -79,7 +79,7 @@ public class BoutiqueDaoImpl implements IBoutiqueDao {
 
 	@Override
 	public List<Produit> produitsParCategorie(Long idCat) {
-		Query req=em.createQuery("select p from Produit p where p.categorie.idCategorie=:x");
+		Query req=em.createQuery("select p from Produit p where p.Categorie.idCategorie=:x");
 		req.setParameter("x", idCat);
 		return req.getResultList();
 	}
