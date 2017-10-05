@@ -9,7 +9,7 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css"
-	href="<%=request.getContextPath()%>/resources/CSS/style1.css" />
+	href="<%=request.getContextPath()%>/resources/css/style1.css" />
 
 <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" -->
 <!-- 	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" -->
@@ -38,17 +38,17 @@
 					<table>
 						<tr>
 							<td>ID Catégorie</td>
-							<td><f:input path="idCategorie"/></td>
+							<td><f:input path="idCategorie" class="form-control"/></td>
 							<td><f:errors path="idCategorie" cssClass="errors" /></td>
 						</tr>
 						<tr>
 							<td>Nom Catégorie</td>
-							<td><f:input path="nomCategorie" /></td>
+							<td><f:input path="nomCategorie" class="form-control" /></td>
 							<td><f:errors path="nomCategorie" cssClass="errors" /></td>
 						</tr>
 						<tr>
 							<td>Déscription Catégorie</td>
-							<td><f:textarea path="description" /></td>
+							<td><f:textarea path="description" class="form-control" /></td>
 							<td><f:errors path="description" cssClass="errors" /></td>
 						</tr>
 						<tr>
@@ -57,7 +57,7 @@
 							<td><c:if test="${categorie.idCategorie!=null}">
 									<img src="photoCat?idCat=${categorie.idCategorie}" />
 								</c:if></td>
-							<td><input type="file" name="file" /></td>
+							<td><input type="file" name="file" class="form-control" /></td>
 						</tr>
 
 						<tr>
@@ -74,10 +74,11 @@
 
 
 		<div id="tabCategories">
+		<div class="table-responsive">
 			<div class="panel panel-primary">
 				<div class="panel-heading">Liste des catégories</div>
 				<div class="panel-body">
-					<table >
+					<table class="table">
 						<tr>
 							<th>ID</th>
 							<th>Nom Catégorie</th>
@@ -100,6 +101,7 @@
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 
 </body>

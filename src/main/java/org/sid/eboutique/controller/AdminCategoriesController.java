@@ -1,5 +1,6 @@
 package org.sid.eboutique.controller;
 
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -17,9 +18,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.multipart.MultipartFile;
@@ -52,6 +51,8 @@ public class AdminCategoriesController implements HandlerExceptionResolver {
 			BufferedImage bi = ImageIO.read(file.getInputStream());
 			c.setPhoto(file.getBytes());
 			c.setNomPhoto(file.getOriginalFilename());
+			
+			
 		}
 		if(c.getIdCategorie()!=null)
 		{
